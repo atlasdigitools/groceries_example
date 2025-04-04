@@ -1,0 +1,180 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#weeks-view {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#weeks-view h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+#weeks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.week-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.week-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.week-card h2 {
+    color: #2980b9;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between emoji and text */
+}
+
+.week-card p {
+    color: #7f8c8d;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.week-card .image-placeholder {
+    background: #ecf0f1;
+    height: 150px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #bdc3c7;
+    font-size: 1.1em;
+}
+
+#week-details {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#week-details h1 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#week-details button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s;
+}
+
+#week-details button:hover {
+    background-color: #2980b9;
+}
+
+#groceries-table {
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+tr td:first-child[colspan="3"] {
+    background-color: #ecf0f1;
+    font-weight: bold;
+    color: #2c3e50;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between emoji and category name */
+}
+
+td .item-with-emoji {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between emoji and item name */
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#export-btn {
+    margin-top: 20px;
+    background-color: #2ecc71;
+}
+
+#export-btn:hover {
+    background-color: #27ae60;
+}
+
+@media (max-width: 600px) {
+    #weeks-container {
+        grid-template-columns: 1fr;
+    }
+    
+    table {
+        font-size: 0.9em;
+    }
+    
+    th, td {
+        padding: 10px;
+    }
+}
